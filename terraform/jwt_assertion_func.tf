@@ -42,8 +42,8 @@ resource "oci_functions_application" "test_application" {
      "debug_level" = "${var.debug_level}"
      "encrypted_key" = "${oci_kms_encrypted_data.test_encrypted_key.ciphertext}"
      "encrypted_cert" = "${oci_kms_encrypted_data.test_encrypted_cert.ciphertext}"
-     "kms_endpoint" = "${oci_kms_vault.test_vault.crypto_endpoint}"
-     "kms_secret_key" = "${oci_kms_key.test_key.id}"
+     "kms_endpoint" = "${data.oci_kms_vault.test_vault.crypto_endpoint}"
+     "kms_secret_key" = "${data.oci_kms_key.test_key.id}"
   }
 }
 
