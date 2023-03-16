@@ -88,7 +88,7 @@ resource "oci_kms_encrypted_data" "test_encrypted_cert" {
 resource "oci_functions_function" "auth_function" {
   application_id = "${oci_functions_application.test_application.id}"
   display_name   = "jwt_assertion"
-  image          = "${var.region_code}.ocir.io/${var.tenancy_namespace}/${var.repos_name}/jwt_assertion:1.0.0"
+  image          = "iad.ocir.io/sehubjapaciaas/oic_functions:jwt_assertion"
   memory_in_mbs  = "256"
   timeout_in_seconds = "120"
 }
