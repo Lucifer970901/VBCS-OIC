@@ -54,7 +54,7 @@ resource "oci_functions_application" "test_application" {
 #}
 data "oci_kms_vault" "test_vault" {
     #Required
-    vault_id = 'ocid1.vault.oc1.iad.b5sbgejmaacmc.abuwcljtj4w32etulm7cl4r72zcczvsrznjogyzuzub4c7o7zsidkmmvw6na'
+    vault_id = "ocid1.vault.oc1.iad.b5sbgejmaacmc.abuwcljtj4w32etulm7cl4r72zcczvsrznjogyzuzub4c7o7zsidkmmvw6na"
 }
 
 #resource "oci_kms_key" "test_key" {
@@ -69,8 +69,8 @@ data "oci_kms_vault" "test_vault" {
 #}
 data "oci_kms_key" "test_key" {
     #Required
-    key_id = 'ocid1.key.oc1.iad.b5sbgejmaacmc.abuwcljshr24bm7us77emtdclekrrl4ei5i52xqpmowlnufdotahufnjgeiq'
-    management_endpoint = 'https://b5sbgejmaacmc-management.kms.us-ashburn-1.oraclecloud.com'
+    key_id = "ocid1.key.oc1.iad.b5sbgejmaacmc.abuwcljshr24bm7us77emtdclekrrl4ei5i52xqpmowlnufdotahufnjgeiq"
+    management_endpoint = "https://b5sbgejmaacmc-management.kms.us-ashburn-1.oraclecloud.com"
 }
 
 resource "oci_kms_encrypted_data" "test_encrypted_key" {
