@@ -34,7 +34,7 @@ resource "oci_functions_application" "test_application" {
   #Required
   compartment_id = "${var.compartment_ocid}"
   display_name   = "${var.name_prefix}_jwtassertion_application"
-  subnet_ids     = ["${var.subnet_ocid}"]
+  subnet_ids     = ["${var.subnet_id}"]
   config = {
      "issuer_name" = "${var.issuer_name}"
      "clientid" = "${var.clientid}"
